@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title>Hello World</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+		<link href="./style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body ng-controller="mainCtrl">
+		<h1>Victoria University of Wellington Course Planner</h1>
+		<p id="test">Enter a course</p>
+		<input type="text" placeholder="STAT 193" ng-model="currentInput">
+		<input type="button" value="Add New Course" ng-click="addCourse()">
+		<input type="button" value="Course Lookup" ng-click="">
+
+		<ul>
+			<li ng-repeat="course in getCourseVals()">
+				{{course.name}}
+				<input type="button" value="X" ng-click="removeCourse(course.id)">
+			</li>
+		</ul>
+
+		<script>
+			require("./render.js");
+		</script>
+	</body>
+</html> 
