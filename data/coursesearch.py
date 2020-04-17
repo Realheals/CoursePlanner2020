@@ -35,6 +35,8 @@ def printFullCourseInfo(courseID):
     if len(pointsObj) > 1:
         pointsObj = pointsObj[1].replace(" (P)", "Pre-reqs")
         pointsObj = pointsObj.replace(" (X)", "Restrictions")
+        # Removes part saying it's the same course
+        pointsObj = re.split(r";?\s?\(D\)",pointsObj)[0]
 
         for preReqRestriction in pointsObj.split(";"):
             soFar += f"\n{preReqRestriction}"
