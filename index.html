@@ -7,18 +7,43 @@
 		<link href="./style.css" rel="stylesheet" type="text/css">
 	</head>
 	<body ng-controller="mainCtrl">
-		<h1>Victoria University of Wellington Course Planner</h1>
-		<p id="test">Enter a course</p>
-		<input type="text" placeholder="STAT 193" ng-model="currentInput">
-		<input type="button" value="Add New Course" ng-click="addCourse()">
-		<input type="button" value="Course Lookup" ng-click="">
+		<div id="main-wrapper">
+      		<div id="side-bar">
+      			<br>
+      			<br>
+      			<br>
+      			<br>
+      			<br>
+      			<br>
+		        <hr noshade="noshade">
+		        <span class="smaller-text">Menu</span>
+		        <button>Home</button>
+		        <button>Course</button>
+		        <button>Help</button>
+		        <hr noshade="noshade">
+		        <span class="smaller-text">Saved Plans</span>
+		        <button>Plan 1</button>
+		        <button>Plan 2</button>
+      		</div>
+		    <div id="main-content">
+		        <div id="header-content">
+		        	<h1>Victoria University of Wellington<br>Course Planner</h1>
+		        </div>
+		        <div>
+		        	<p id="course-name">Enter a course</p>
+					<input type="text" placeholder="STAT 193" ng-model="currentInput">
+					<input type="button" value="Add New Course" ng-click="addCourse()">
+					<input type="button" value="Course Lookup" ng-click="">
 
-		<ul>
-			<li ng-repeat="course in getCourseVals()">
-				{{course.name}}
-				<input type="button" value="X" ng-click="removeCourse(course.id)">
-			</li>
-		</ul>
+					<ul>
+						<li ng-repeat="course in getCourseVals()">
+							{{course.name}}
+							<input type="button" value="X" ng-click="removeCourse(course.id)">
+						</li>
+					</ul>
+		        </div>
+		    </div>
+		</div>
 
 		<script>
 			require("./render.js");
