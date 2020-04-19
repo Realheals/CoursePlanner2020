@@ -1,4 +1,70 @@
-h1 {
-	color:green;
-	font-family:Verdana;
+body {
+  padding:0;
+  margin:0;
+  vertical-align:top;
+  color:white;
+}
+
+#main-wrapper{
+  padding:0;
+  margin:0;
+  background-color:rgb(236,236,236);
+  display:flex;
+  font-family:Verdana;
+	text-align:center;
+}
+
+.smaller-text {
+  font-size:0.85em;
+}
+
+
+#side-bar {
+  background-color:rgb(88,82,141);
+  width:150px;
+  height:100vh;
+  float:left;
+
+}
+
+#header-content {
+  margin:0px;
+  width:100%;
+  background-color:rgb(164,80,80);
+  padding-top:18px;
+  padding-bottom:10px;
+}
+
+#main-content {
+  
+  width:90%;
+  font-size:0.8em;
+}
+
+hr {
+  background-color:rgb(76, 70, 114);
+  height:2px;
+  border-width:0;
+}
+
+button {
+  text-align:left;
+  margin-top:10px;
+  margin-bottom:10px;
+  border:0;
+  background-color:rgb(88,82,141);
+  cursor: pointer;
+  height:30px;
+  width:100%;
+  font-size:1.0em;
+  font-family:Verdana;
+  color:white;
+  font-weight:50px;
+}
+
+#course-name, li {
+	color:black;
+	font-size:14px;
+	font-weight:200;
+  list-style:none;
 }
